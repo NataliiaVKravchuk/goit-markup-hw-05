@@ -412,6 +412,7 @@ body {
 }
 .footer-lists {
 	display: flex;
+	align-items: baseline;
 }
 .footer-logo {
 	color: var(--first-title-color);
@@ -490,8 +491,9 @@ body {
 	min-width: 73px;
 	text-align: center;
 	background: #f5f4fa;
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		box-shadow 250ms cubic-bezier (0.4, 0, 0.2, 1);
+	transition-property: color, background-color, box-shadow;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter:hover,
@@ -549,7 +551,7 @@ body {
 	background-color: rgba(33, 150, 243, 0.9);
 	padding: 63px 24px;
 	height: 100%;
-	transform: translateY(100%);
+	transform: translateY(101%);
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -568,7 +570,8 @@ body {
 .work-link:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.work-link:hover .works-top-text {
+.work-link:hover .works-top-text,
+.work-link:focus .works-top-text {
 	transform: translateY(0);
 }
 
